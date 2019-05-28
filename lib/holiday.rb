@@ -59,8 +59,8 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  holiday_hash.each do |key, value|
-    puts "#{key}: #{value}"
+  holiday_hash.each_value do |value| if key == "BQQ"
+    puts "#{value}"
   end
 end
 
@@ -69,5 +69,6 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.select { |key, value| key == ["BBQ"]
     puts "#{value}".to_sym}
- end
+    end
+  end
 end
