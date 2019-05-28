@@ -59,16 +59,17 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  holiday_hash.each_value do |value| if key == "BQQ"
-    puts "#{value}"
+  holiday_hash.each_value do |key, value|
+    puts "#{key}: #{value}"
   end
 end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-  holiday_hash.select { |key, value| key == ["BBQ"]
-    puts "#{value}".to_sym}
+  holiday_hash.each_value do |value| if key == "BQQ"
+    puts "#{value}"
     end
   end
+ end
 end
